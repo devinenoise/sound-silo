@@ -14,7 +14,7 @@
 #sample-packs li {
     list-style: none;
     position: relative;
-    background: #9eafb1;
+    background-image: linear-gradient(#29404e, #9eafb1);
     border: 4px solid #29404e;
     border-radius: 5px;
     width: 400px;
@@ -43,11 +43,10 @@ button {
     padding: 20px;
     width: 50%;
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 17px;
     background: #9eafb1;
     text-transform: uppercase;
-    text-decoration: none;
-    outline: none;
+    outline: #29404e;
 }
 button:hover {
     background: #29404e;
@@ -60,4 +59,8 @@ button:hover {
     width: 80%;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.description {
+    display: inline-block;
 }
