@@ -3,7 +3,6 @@ function createSamplePack(samplePackage) {
     li.className = samplePackage.category;
     li.title = samplePackage.description;
 
-
     const h3 = document.createElement('h3');
     h3.textContent = samplePackage.name;
     li.appendChild(h3);

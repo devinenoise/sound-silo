@@ -55,3 +55,13 @@ header nav a:hover {
     margin: 20px;
     padding: 14px;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #29404e;
+    color: #f5f6f2;
+    text-align: center;
+  }
