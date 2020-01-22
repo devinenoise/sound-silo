@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Bree Serif', serif;
+    font-family: 'Montserrat', serif;
     background: #9eafb1;
-    margin: 0;
+    
 
 }
 
@@ -23,6 +25,7 @@ header nav a {
     color: #f5f6f2;
     border: 2px solid #f5f6f2;
     padding: 15px;
+    margin: 10px;
     text-decoration: none;
     text-transform: uppercase;
     transition: color 100ms ease-in;
@@ -40,7 +43,15 @@ header nav a:hover {
 }
 
 .home-image {
-    height: 400px;
+    height: 600px;
     padding: 10px;
-    margin: 0px auto;
+    margin-right: 10px;
+    float: left;
+    
+}
+
+.intro-text {
+    font-size: 20px;
+    margin: 20px;
+    padding: 14px;
 }

@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 * {
     box-sizing: border-box;
+    
 }
 
 #sample-packs {
@@ -12,11 +15,10 @@
     list-style: none;
     position: relative;
     background: #9eafb1;
-    border: 2px solid #29404e;
+    border: 4px solid #29404e;
     border-radius: 5px;
     width: 400px;
-    margin-right: 5px;
-    margin-bottom: 5px;
+    margin: 10px 10px 10px 10px;
     padding: 10px;
     text-align: center;
 
@@ -26,6 +28,7 @@
     margin: 5px;
     padding: 10px;
     text-transform: uppercase;
+    
 }
 
 #sample-packs li img {
@@ -36,7 +39,7 @@
 
 button {
     transition: color 100ms ease-in-out;
-    border: 3px solid black;
+    border: 3px solid #29404e;
     padding: 10px;
     width: 50%;
     margin-top: 10px;
