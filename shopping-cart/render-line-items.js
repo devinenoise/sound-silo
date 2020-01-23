@@ -11,13 +11,13 @@ function renderLineItem(lineItem, packs) {
     tr.appendChild(quantity);
 
     const priceCell = document.createElement('td');
-    priceCell.textContent = packs.price;
+    priceCell.textContent = `$${packs.price}`;
     tr.appendChild(priceCell);
 
     const lineItemTotal = document.createElement('td');
     lineItemTotal.className = 'line-item-total';
     const totalCost = lineItem.quantity * packs.price;
-    lineItemTotal.textContent = totalCost;
+    lineItemTotal.textContent = `$${totalCost}`;
     tr.appendChild(lineItemTotal);
 
     return tr;

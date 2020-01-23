@@ -17,7 +17,7 @@ for (let i = 0; i < cart.length; i++) {
 
 
 const orderTotal = calcOrderTotal(cart, packs);
-orderTotalCell.textContent = orderTotal;
+orderTotalCell.textContent = `$${orderTotal}`;
 
 
 
