@@ -27,7 +27,6 @@ function createSamplePack(samplePackage) {
     // creates the add element
     const button = document.createElement('button');
     button.textContent = 'Add';
-    button.value = samplePackage.code;
     p.appendChild(button);
 
     // create the description

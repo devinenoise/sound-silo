@@ -3,7 +3,7 @@ import { findById, calcLineItem } from '../common/utils.js';
 import packs from '../data/packs.js';
 
 const test = QUnit.test;
-QUnit.module('Utils')
+QUnit.module('Utils');
 
 test('does it find an id?', assert => {
     //Arrange
@@ -31,7 +31,7 @@ test('return null if not found', assert => {
     assert.equal(result, expected);
 });
 
-test('testing calcLineItem', assert => {
+test('testing calcLineItem works', assert => {
     //Arrange
     // Set up your parameters and expectations
     const quantity = 3;

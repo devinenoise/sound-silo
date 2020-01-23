@@ -22,47 +22,51 @@
     </header>
     <main>
         <table class="cart">
+            <thead>
                 <tr>
-                  <th>Product</th>
-                  <th>Quantity</th>
-                  <th>Price</th>
-                  <th>Item Total</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Item Total</th>
                 </tr>
+            </thead>
+            <tbody>
                 <tr>
-                  <td>808 Gold</td>
-                  <td>1</td>
-                  <td>$19.99</td>
-                  <td></td>
+                    <td>808 Gold</td>
+                    <td>1</td>
+                    <td>$19.99</td>
+                    <td class="line-item-total"></td>
                 </tr>
                 <tr>
                     <td>Lofi Soul</td>
                     <td>1</td>
                     <td>$19.99</td>
-                    <td></td>
+                    <td class="line-item-total"></td>
                 </tr>
                 <tr>
                     <td>Hyperspace Loops</td>
                     <td>3</td>
                     <td>$19.99</td>
-                    <td></td>
+                    <td class="line-item-total"></td>
                 </tr>
                 <tr>
                     <td>Lush Vintage</td>
                     <td>2</td>
                     <td>$19.99</td>
-                    <td></td>
+                    <td class="line-item-total"></td>
                 </tr>
-                <th>Order Total:</th>
-                <th id="quantity-total"></th>
-                <th id="order-total"></th>
-                <th></th>
-              </table>
+            </tbody>
+            <th>Totals:</th>
+            <td id="quantity-total"></td>
+            <td id="cart-total"></td>
+            <th></th>
+        </table>
         </table>
         <button id="place-order" class="button">Place Order</button>
 
 
     </main>
-    <script type="module" src="app.js"></script>
+    <script type="module" src="shopping-cart.js"></script>
     <div class="footer">
         <p>&copy; Copyright 2020. Design by Kyle Devine.</p>
     </div>
