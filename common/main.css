@@ -2,7 +2,6 @@
 
 * {
     box-sizing: border-box;
-    
 }
 
 body {
@@ -18,24 +17,22 @@ header {
     align-items: center;
     background: #29404e;
     color: #f5f6f2;
-    padding: 8px;
-    
+    padding: 10px;
 }
 
-header nav a {
+nav a {
     color: #f5f6f2;
     display: inline-block;
     border: 2px solid #f5f6f2;
-    padding: 10px;
-    margin: 5px;
+    padding: 4%;
+    margin: 2%;
     text-decoration: none;
     text-transform: uppercase;
     transition: color 100ms ease-in;
 }
 
-header nav a:hover {
+nav a:hover {
     color: #ac5b48;
-    border: 1px solid #ac5b48;
 }
 
 .welcome {
@@ -70,4 +67,8 @@ header nav a:hover {
     background: #29404e;
     color: #f5f6f2;
     text-align: center;
+}
+
+#page-header {
+    margin: 10px;
 }
