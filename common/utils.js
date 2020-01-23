@@ -4,7 +4,15 @@ export function findById(array, id) {
         if (item.id === id) {
             return item;
         }
-    }   
+    }
     return null;
 }
 
+export function calcLineItem(quantity, price) {
+    const lineItemTotal = quantity * price;
+    return roundCurrency(lineItemTotal);
+}
+
+function roundCurrency(lineItemTotal) {
+    return Math.round(lineItemTotal * 100) / 100;
+}
