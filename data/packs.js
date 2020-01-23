@@ -1,5 +1,5 @@
 const eightOhEightGold = {
-    id: 'eightOhEightGold',
+    id: '808Gold',
     name: '808 Gold',
     image: '808-gold.png',
     description: 'Heavy 808 drums processed for maximum punch.',
@@ -9,63 +9,63 @@ const eightOhEightGold = {
 };
 
 const hyperspaceLoops = {
-    id: 'hyperspaceLoops',
+    id: 'HyperspaceLoops',
     name: 'Hyperspace Loops',
     image: 'hyperspace-loops.png',
     description: 'Spacey analog synth sounds processed with vintage tape machines.',
     category: 'loops',
     price: 19.99,
-
+    
 };
 
 const infinityPack = {
-    id: 'infinityPack',
+    id: 'InfinityPack',
     name: 'Infinity Pack',
     image: 'infinity-pack.png',
     description: '2020 is the year of infinity.  Take your production to the next level with these futuristic loops.',
     category: 'loops',
     price: 19.99,
-
+    
 };
 
 const lofiSoul = {
-    id: 'lofiSoul',
+    id: 'LofiSoul',
     name: 'Lofi Soul',
     image: 'lofi-soul.png',
     description: 'Detuned and lofi grooves from vintage analog synths.',
     category: 'loops',
     price: 19.99,
-
+    
 };
 
 const lushVintage = {
-    id: 'lushVintage',
+    id: 'LushVintage',
     name: 'Lush Vintage',
     image: 'lush-vintage.png',
     description: 'Dusty grooves and vintage electric pianos.',
     category: 'loops',
     price: 19.99,
-
+    quantity: 2,
 };
 
 const machineAge = {
-    id: 'machineAge',
+    id: 'MachineAge',
     name: 'Machine Age',
     image: 'machine-age.png',
     description: 'Scrapes, bangs, and crashes from an abandoned factory.',
     category: 'drums',
     price: 19.99,
-
+    quantity: 1,
 };
 
 const playgroundDrums = {
-    id: 'playgroundDrums',
+    id: 'PlaygroundDrums',
     name: 'Playground Drums',
     image: 'playground-drums.png',
     description: 'Sounds captured from playground equipment.',
     category: 'drums',
     price: 19.99,
-
+    
 };
 
 const packs = [
@@ -77,5 +77,6 @@ const packs = [
     machineAge,
     playgroundDrums
 ];
-
 export default packs;
+
+
