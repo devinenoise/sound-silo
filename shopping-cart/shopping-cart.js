@@ -1,15 +1,15 @@
 import { cart } from '../data/cart.js';
 import { packs } from '../data/packs.js';
 import { findById, calcOrderTotal } from '../common/utils.js';
-import { renderLineItems } from 'render-line-items.js';
+import { renderLineItem } from 'render-line-items.js';
 
 const tbody = document.querySelector('tbody');
-const orderTotalTable = document.getElementById('cart-total');
+const orderTotalCell = document.getElementById('cart-total');
 
 for (let i = 0; i < cart.length; i++) {
     const lineItem = cart[i];
-    const pack = findById(packs, lineItem.id);
-    const display = renderLineItems(lineItem, pack);
+    const checkInventory = findById(packs, lineItem.id);
+    const display = renderLineItem(lineItem, checkInventory);
 
     tbody.appendChild(display);
 }
@@ -17,7 +17,7 @@ for (let i = 0; i < cart.length; i++) {
 
 
 const orderTotal = calcOrderTotal(cart, packs);
-orderTotalTable.textContent = orderTotal;
+orderTotalCell.textContent = orderTotal;
 
 
 

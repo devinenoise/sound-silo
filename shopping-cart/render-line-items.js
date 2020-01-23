@@ -1,7 +1,8 @@
-function renderLineItems(lineItem, pack) {
+function renderLineItem(lineItem, pack) {
     const tr = document.createElement('tr');
 
     const name = document.createElement('td');
+    name.className = 'title';
     name.textContent = pack.name;
     tr.appendChild(name);
 
@@ -22,4 +23,4 @@ function renderLineItems(lineItem, pack) {
     return tr;
 }
 
-export default renderLineItems;
+export default renderLineItem;

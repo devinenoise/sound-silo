@@ -18,13 +18,14 @@ function roundCurrency(lineItemTotal) {
 }
 
 export function calcOrderTotal(cart, packs) {
-    let totalOrder = 0;
+    let orderTotal = 0;
 
     for (let j = 0; j < cart.length; j++) {
         const lineItem = cart[j];
-        const product = findById(packs, lineItem.id);
-        const lineTotal = calcLineItem(lineItem.quantity, product.price);
-        totalOrder += lineTotal; 
+        const pack = findById(packs, lineItem.id);
+        const lineTotal = calcLineItem(lineItem.quantity, pack.price);
+        orderTotal = orderTotal + lineTotal;
     }
-    return roundCurrency(totalOrder);
+
+    return roundCurrency(orderTotal);
 }
