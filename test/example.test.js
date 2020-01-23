@@ -1,12 +1,12 @@
 // IMPORT MODULES under test here:
-import { findById, calcLineItem, calcOrderTotal } from '../common/utils.js';
 import packs from '../data/packs.js';
 import cart from '../data/cart.js';
+import { findById, calcLineItem, calcOrderTotal } from '../common/utils.js';
 
 const test = QUnit.test;
 QUnit.module('Utils');
 
-test('does it find an id?', assert => {
+test('find product id', assert => {
     //Arrange
     // Set up your parameters and expectations
     const id = '808Gold';
@@ -19,7 +19,7 @@ test('does it find an id?', assert => {
     assert.equal(result.id, expected);
 });
 
-test('return null if not found', assert => {
+test('return null if product id not found', assert => {
     //Arrange
     // Set up your parameters and expectations
     const id = 'not found';
@@ -32,7 +32,7 @@ test('return null if not found', assert => {
     assert.equal(result, expected);
 });
 
-test('testing calcLineItem works', assert => {
+test('calculate line total', assert => {
     //Arrange
     // Set up your parameters and expectations
     const quantity = 3;
@@ -46,7 +46,7 @@ test('testing calcLineItem works', assert => {
     assert.equal(result, expected);
 });
 
-test('testing calcOrderTotal works', assert => {
+test('calculate order total', assert => {
     //Arrange
     // Set up your parameters and expectations
     const expected = 139.93; 

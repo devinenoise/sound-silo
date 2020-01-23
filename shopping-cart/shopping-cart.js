@@ -1,7 +1,7 @@
-import { cart } from '../data/cart.js';
-import { packs } from '../data/packs.js';
+import cart from '../data/cart.js';
+import packs from '../data/packs.js';
 import { findById, calcOrderTotal } from '../common/utils.js';
-import { renderLineItem } from 'render-line-items.js';
+import renderLineItem from './render-line-items.js';
 
 const tbody = document.querySelector('tbody');
 const orderTotalCell = document.getElementById('cart-total');
@@ -22,8 +22,3 @@ orderTotalCell.textContent = orderTotal;
 
 
 
-// const cartTotal = document.createElement('td'); 
-//     cartTotal.className = 'cart-total';
-//     const totalOrder = calcOrderTotal(pack.quantity * );
-//     cartTotal.textContent = totalOrder;
-//     tr.appendChild(cartTotal);
