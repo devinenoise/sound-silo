@@ -1,3 +1,5 @@
+
+
 function renderLineItem(lineItem, packs) {
     const tr = document.createElement('tr');
 

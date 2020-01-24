@@ -1,3 +1,6 @@
+import packs from '../data/packs.js';
+import { findById } from '../common/utils.js';
+
 function createSamplePack(samplePackage) {
     // creates the list element    
     const li = document.createElement('li');
@@ -24,16 +27,18 @@ function createSamplePack(samplePackage) {
     const usd = '$' + samplePackage.price.toFixed(2);
     p.textContent = usd;
 
-    // creates the add element
-    const button = document.createElement('button');
-    button.textContent = 'Add';
-    p.appendChild(button);
-
-    // create the description
+     // create the description
     const desc = document.createElement('div');
     desc.textContent = samplePackage.description;
     li.className = 'description';
     li.appendChild(desc);
+
+    // creates the add button event listner
+    const button = document.createElement('button');
+    button.textContent = 'Add';
+    //button.value = packs.id;
+    
+    p.appendChild(button);
 
     return li;
 }
