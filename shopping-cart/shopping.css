@@ -20,11 +20,11 @@ th {
 }
 
   
-  tr:nth-child(even) {
+tr:nth-child(even) {
     background-color: #f5f6f2;
   }
 
-  button {
+button {
     transition: color 100ms ease-in-out;
     border: 3px solid #29404e;
     padding: 20px;
@@ -36,7 +36,23 @@ th {
     text-transform: uppercase;
     outline: #29404e;
 }
-button:hover {
+#place-order-button:hover {
+    background: #29404e;
+    color: white
+}
+
+#reset-button:hover {
+    background: #29404e;
+    color: white
+}
+
+#button-container {
+    display: flex;
+    flex-direction: column;       
+}
+
+#place-order-button:disabled {
+    opacity: 0.5px;
     background: #29404e;
     color: white
 }

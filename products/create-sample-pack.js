@@ -1,3 +1,5 @@
+import { findById } from '../common/utils.js';
+
 function createSamplePack(samplePackage) {
     // creates the list element    
     const li = document.createElement('li');
@@ -18,22 +20,59 @@ function createSamplePack(samplePackage) {
     // creates the price
     const p = document.createElement('p');
     p.className = 'price';
-    li.appendChild(p);
+
 
     // moves decimal place two spaces
     const usd = '$' + samplePackage.price.toFixed(2);
     p.textContent = usd;
-
-    // creates the add element
-    const button = document.createElement('button');
-    button.textContent = 'Add';
-    p.appendChild(button);
 
     // create the description
     const desc = document.createElement('div');
     desc.textContent = samplePackage.description;
     li.className = 'description';
     li.appendChild(desc);
+
+    const button = document.createElement('button');
+    button.textContent = 'Add';
+    button.value = samplePackage.id;
+
+    // creates the add button event listener
+    button.addEventListener('click', () => {
+
+    // adding to localStorage
+        let potentialCart = localStorage.getItem('Cart');
+        let cart;
+        if (potentialCart) {
+            cart = JSON.parse(potentialCart);
+        }
+        // if no cart found, set to an empty array
+        else {
+            cart = [];
+        }
+
+    // find the lineItem in the product array
+        let lineItem = findById(cart, samplePackage.id);
+    // if there's nothing in the cart, create an object
+        if (!lineItem) {
+            lineItem = {
+                id: samplePackage.id,
+                quantity: 1
+            };
+    // add the item to the cart
+            cart.push(lineItem);
+        }
+        else {
+            lineItem.quantity++;
+        }
+    // turn the data into a string for localStorage
+        potentialCart = JSON.stringify(cart);
+        localStorage.setItem('Cart', potentialCart);
+
+        alert('1 ' + samplePackage.name + ' added to cart');
+
+    });
+    p.appendChild(button);
+    li.appendChild(p);
 
     return li;
 }
