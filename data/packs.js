@@ -22,7 +22,7 @@ const infinityPack = {
     id: 'InfinityPack',
     name: 'Infinity Pack',
     image: 'infinity-pack.png',
-    description: '2020 is the year of infinity.  Take your production to the next level with these futuristic loops.',
+    description: 'Take your production to the next level with these futuristic loops.',
     category: 'loops',
     price: 19.99,
     

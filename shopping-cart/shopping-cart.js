@@ -1,21 +1,16 @@
-// import cart from '../data/cart.js';
 import packs from '../data/packs.js';
 import { findById, calcOrderTotal } from '../common/utils.js';
 import renderLineItem from './render-line-items.js';
-
 
 const tbody = document.querySelector('tbody');
 const orderTotalCell = document.getElementById('cart-total');
 const orderButton = document.getElementById('place-order-button');
 
-// reset localStorage button
-//const resetButton = document.getElementById('reset-button');
-
-
-const json = localStorage.getItem('Cart');
 let cart;
-if (json) {
-    cart = JSON.parse(json);
+// checking for empty cart
+const potentialCart = localStorage.getItem('Cart');
+if (potentialCart) {
+    cart = JSON.parse(potentialCart);
 }
 else {
     cart = [];
@@ -25,18 +20,20 @@ else {
 for (let i = 0; i < cart.length; i++) {
     const lineItem = cart[i];
     const checkInventory = findById(packs, lineItem.id);
-    const dom = renderLineItem(lineItem, checkInventory);
+    const display = renderLineItem(lineItem, checkInventory);
 
-    tbody.appendChild(dom);
+    tbody.appendChild(display);
 }
-
+// create the order total and update the table
 const orderTotal = calcOrderTotal(cart, packs);
 orderTotalCell.textContent = `$${orderTotal}`;
 
+// if the cart is empty, disable the place order button
 if (cart.length === 0) {
     orderButton.disabled = true;
     orderButton.textContent = 'Nothing In Cart';
 }
+// place the order, alert the user, reset cart, and return to home page
 else {
     orderButton.addEventListener('click', () => {
         localStorage.removeItem('Cart');
@@ -44,9 +41,3 @@ else {
         window.location = '../index.html';
     });
 }
-
-// resetButton.addEventListener('click', () => {
-//     localStorage.clear();
-
-// });
-

@@ -24,7 +24,7 @@ tr:nth-child(even) {
     background-color: #f5f6f2;
   }
 
-#place-order-button {
+button {
     transition: color 100ms ease-in-out;
     border: 3px solid #29404e;
     padding: 20px;
@@ -41,6 +41,11 @@ tr:nth-child(even) {
     color: white
 }
 
+#reset-button:hover {
+    background: #29404e;
+    color: white
+}
+
 #button-container {
     display: flex;
     flex-direction: column;       
@@ -49,5 +54,5 @@ tr:nth-child(even) {
 #place-order-button:disabled {
     opacity: 0.5px;
     background: #29404e;
-    
+    color: white
 }

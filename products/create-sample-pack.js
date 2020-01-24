@@ -1,4 +1,3 @@
-//import packs from '../data/packs.js';
 import { findById } from '../common/utils.js';
 
 function createSamplePack(samplePackage) {
@@ -39,30 +38,33 @@ function createSamplePack(samplePackage) {
 
     // creates the add button event listener
     button.addEventListener('click', () => {
-        // adding to localStorage
+
+    // adding to localStorage
         let potentialCart = localStorage.getItem('Cart');
         let cart;
         if (potentialCart) {
             cart = JSON.parse(potentialCart);
         }
+        // if no cart found, set to an empty array
         else {
             cart = [];
         }
-        // find the lineItem in the packs array
+
+    // find the lineItem in the product array
         let lineItem = findById(cart, samplePackage.id);
-        // if there's nothing in the cart, create a lineItem
+    // if there's nothing in the cart, create an object
         if (!lineItem) {
             lineItem = {
                 id: samplePackage.id,
                 quantity: 1
             };
-
+    // add the item to the cart
             cart.push(lineItem);
         }
         else {
             lineItem.quantity++;
         }
-
+    // turn the data into a string for localStorage
         potentialCart = JSON.stringify(cart);
         localStorage.setItem('Cart', potentialCart);
 
